@@ -1,1 +1,1 @@
-# TechTalentInfiniti
+# Tech Talent Infiniti
