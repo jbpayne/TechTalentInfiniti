@@ -3,12 +3,12 @@ package com.tti;
 public class Client {
 	
 	private String FullName;
-	private int PhoneNumber;
+	private String PhoneNumber;
 	private String Address;
 	private String TypeOfSale;
 	private int VehicleStockNumber;
 	
-	Client(String fullName, int phoneNumber, String address, String typeOfSale, int vehicleStockNumber) {
+	Client(String fullName, String phoneNumber, String address, String typeOfSale, int vehicleStockNumber) {
 		this.FullName = fullName;
 		this.PhoneNumber = phoneNumber;
 		this.Address = address;
@@ -24,11 +24,11 @@ public class Client {
 		this.FullName = fullName;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return this.PhoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.PhoneNumber = phoneNumber;
 	}
 
