@@ -2,57 +2,57 @@ package com.tti;
 
 public class Client {
 	
-	private String FullName;
-	private String PhoneNumber;
-	private String Address;
-	private String TypeOfSale;
-	private int VehicleStockNumber;
+	private String fullName;
+	private String phoneNumber;
+	private String address;
+	private String typeOfSale;
+	private int vehicleStockNumber;
 	
 	Client(String fullName, String phoneNumber, String address, String typeOfSale, int vehicleStockNumber) {
-		this.FullName = fullName;
-		this.PhoneNumber = phoneNumber;
-		this.Address = address;
-		this.TypeOfSale = typeOfSale;
-		this.VehicleStockNumber = vehicleStockNumber;
+		this.fullName = fullName;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.typeOfSale = typeOfSale;
+		this.vehicleStockNumber = vehicleStockNumber;
 	}
 	
 	public String getFullName() {
-		return this.FullName;
+		return this.fullName;
 	}
 
 	public void setFullName(String fullName) {
-		this.FullName = fullName;
+		this.fullName = fullName;
 	}
 
 	public String getPhoneNumber() {
-		return this.PhoneNumber;
+		return this.phoneNumber;
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
-		this.PhoneNumber = phoneNumber;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getAddress() {
-		return this.Address;
+		return this.address;
 	}
 
 	public void setAddress(String address) {
-		this.Address = address;
+		this.address = address;
 	}
 
 	public String getTypeOfSale() {
-		return this.TypeOfSale;
+		return this.typeOfSale;
 	}
 
 	public void setTypeOfSale(String typeOfSale) {
-		this.TypeOfSale = typeOfSale;
+		this.typeOfSale = typeOfSale;
 	}
 
 	public int getVehicleStockNumber() {
-		return this.VehicleStockNumber;
+		return this.vehicleStockNumber;
 	}
 
 	public void setVehicleStockNumber(int vehicleStockNumber) {
-		this.VehicleStockNumber = vehicleStockNumber;
+		this.vehicleStockNumber = vehicleStockNumber;
 	}
 }
