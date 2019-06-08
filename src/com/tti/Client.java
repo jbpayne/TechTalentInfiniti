@@ -2,20 +2,24 @@ package com.tti;
 
 public class Client {
 	
+	private static int idCounter = 0;
+		
+	private int id;
 	private String fullName;
 	private String phoneNumber;
 	private String address;
-	private String typeOfSale;
-	private int vehicleStockNumber;
-	
-	Client(String fullName, String phoneNumber, String address, String typeOfSale, int vehicleStockNumber) {
-		this.fullName = fullName;
-		this.phoneNumber = phoneNumber;
-		this.address = address;
-		this.typeOfSale = typeOfSale;
-		this.vehicleStockNumber = vehicleStockNumber;
+		
+	Client(String fullName, String phoneNumber, String address) {
+		this.id = createID();
+		this.setFullName(fullName);
+		this.setPhoneNumber(phoneNumber);
+		this.setAddress(address);
 	}
 	
+	public int getId() {
+		return id;
+	}
+
 	public String getFullName() {
 		return this.fullName;
 	}
@@ -39,20 +43,8 @@ public class Client {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-	public String getTypeOfSale() {
-		return this.typeOfSale;
-	}
-
-	public void setTypeOfSale(String typeOfSale) {
-		this.typeOfSale = typeOfSale;
-	}
-
-	public int getVehicleStockNumber() {
-		return this.vehicleStockNumber;
-	}
-
-	public void setVehicleStockNumber(int vehicleStockNumber) {
-		this.vehicleStockNumber = vehicleStockNumber;
+	
+	private static int createID() {
+	    return idCounter += 1;
 	}
 }
