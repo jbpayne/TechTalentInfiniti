@@ -2,65 +2,60 @@ package com.tti;
 
 public class Vehicle {
 
+	private static int idCounter = 0;
+	
+    private int stockNumber; //Declares vehicle stock number as integer
+    private int id; //Declares id as integer
+    private int wholesaleCost; //Declares Dealer Wholesale price as integer (represents US Dollars)
+    private int retailPrice; //Declares Dealer Retail price as integer (represents US Dollars)
+    private int modelYear; //Declares vehicle model year as integer (Takes 4 digit integer)
+    private String make; //Declares vehicle make as String
+    private String model; //Declares vehicle model as String
+    private String color; //Declares vehicle color as String
+    private String vin; //Declares vehicle vin as String
+    private String vehicleType; // Placeholder until functionality added (Using enum)
+    private boolean isLeasable; // Declares isLeasable variable as boolean
+    private int leaseTerm; //Declares leaseTerm as integer in months
+    private int maxMilesPerYear; //Declares Max Miles Per Year as integer
 
-    private int vehicleID;//Declares vehicleIDNumber as integer
-    private int stockNumber;//Declares vehicle stock number as integer
-    private int wholesaleCost;//Declares Dealer Wholesale price as integer (represents US Dollars)
-    private int retailPrice;//Declares Dealer Retail price as integer (represents US Dollars)
-    private int modelYear;//Declares vehicle model year as integer (Takes 4 digit integer)
-    private String make;//Declares vehicle make as String
-    private String model;//Declares vehicle model as String
-    private String color;//Declares vehicle color as String
-    private String vin;//Declares vehicle vin as String
-    private String vehicleType;// Placeholder until functionality added (Using enum)
-    private boolean isLeasable;// Declares isLeasable variable as boolean
-    private int leaseTerm;//Declares leaseTerm as integer in months
-    private int maxMilesPerYear;//Declares Max Miles Per Year as integer
-
-    /* Vehicle constructor code block
-
-
-     */
-    Vehicle(int vehicleID, int stockNumber,
-            int wholesaleCost, int retailPrice,
-            int modelYear, String make, String model,
-            String color, String vin,  String vehicleType,
-            boolean isLeasable, int leaseTerm,
-            int maxMilesPerYear){
-        this.vehicleID = vehicleID;
-        this.stockNumber = stockNumber;
-        this.wholesaleCost = wholesaleCost;
-        this.retailPrice = retailPrice;
-        this.model = model;
-        this.color = color;
-        this.vin = vin;
-        this.vehicleType = vehicleType;
-        this.isLeasable = isLeasable;
-        this.leaseTerm = leaseTerm;
-        this.maxMilesPerYear = maxMilesPerYear;
+    //  Vehicle constructor code block
+    Vehicle(int wholesaleCost, 
+            int retailPrice,
+            int modelYear, 
+            String make, 
+            String model,
+            String color, 
+            String vin,  
+            String vehicleType,
+            boolean isLeasable, 
+            int leaseTerm,
+            int maxMilesPerYear) {
+    	
+        this.stockNumber = createStockNumber();
+        this.id = getStockNumber();
+        this.setWholesaleCost(wholesaleCost);
+        this.setRetailPrice(retailPrice);
+        this.setMake(make);
+        this.setModel(model);
+        this.setColor(color);
+        this.setVin(vin);
+        this.setVehicleType(vehicleType);
+        this.setLeasable(isLeasable);
+        this.setLeaseTerm(leaseTerm);
+        this.setMaxMilesPerYear(maxMilesPerYear);
     }
-    /* Code block Getter and setters code block
-
-
-     */
-    public int getVehicleID() {
-        return vehicleID;
-    }
-
-    public void setVehicleID(int vehicleID) {
-        this.vehicleID = vehicleID;
+    
+    // Code block Getter and setters code block
+    public int getID() {
+        return this.id;
     }
 
     public int getStockNumber() {
-        return stockNumber;
-    }
-
-    public void setStockNumber(int stockNumber) {
-        this.stockNumber = stockNumber;
+        return this.stockNumber;
     }
 
     public int getWholesaleCost() {
-        return wholesaleCost;
+        return this.wholesaleCost;
     }
 
     public void setWholesaleCost(int wholesaleCost) {
@@ -71,7 +66,7 @@ public class Vehicle {
      * @return the retailPrice
      */
     public int getRetailPrice() {
-        return retailPrice;
+        return this.retailPrice;
     }
 
     /**
@@ -85,7 +80,7 @@ public class Vehicle {
      * @return the modelYear
      */
     public int getModelYear() {
-        return modelYear;
+        return this.modelYear;
     }
 
     /**
@@ -99,7 +94,7 @@ public class Vehicle {
      * @return the make
      */
     public String getMake() {
-        return make;
+        return this.make;
     }
 
     /**
@@ -113,7 +108,7 @@ public class Vehicle {
      * @return the model
      */
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     /**
@@ -127,7 +122,7 @@ public class Vehicle {
      * @return the color
      */
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     /**
@@ -141,7 +136,7 @@ public class Vehicle {
      * @return the vin
      */
     public String getVin() {
-        return vin;
+        return this.vin;
     }
 
     /**
@@ -155,7 +150,7 @@ public class Vehicle {
      * @return the vehicleType
      */
     public String getVehicleType() {
-        return vehicleType;
+        return this.vehicleType;
     }
 
     /**
@@ -169,7 +164,7 @@ public class Vehicle {
      * @return the isLeasable
      */
     public boolean isLeasable() {
-        return isLeasable;
+        return this.isLeasable;
     }
 
     /**
@@ -183,7 +178,7 @@ public class Vehicle {
      * @return the leaseTerm
      */
     public int getLeaseTerm() {
-        return leaseTerm;
+        return this.leaseTerm;
     }
 
     /**
@@ -197,7 +192,7 @@ public class Vehicle {
      * @return the maxMilesPerYear
      */
     public int getMaxMilesPerYear() {
-        return maxMilesPerYear;
+        return this.maxMilesPerYear;
     }
 
     /**
@@ -224,4 +219,8 @@ public class Vehicle {
         //	else{
         return 500.0f;
     }
+    
+	private static int createStockNumber() {
+	    return idCounter += 1;
+	}
 }

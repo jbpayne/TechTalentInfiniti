@@ -10,9 +10,14 @@ public class Test {
 	private static SaleRequest ticket02 = new SaleRequest(client02, "Lease", null);
 	private static SaleRequest ticket03 = new SaleRequest(client02, "Full Sale", null);
 	
+	private static Vehicle vehicle01 = new Vehicle(20000, 22000, 2019, "Toyota", "Corolla", "Black", "36876G7dD8d9HJ", "CAR", false, 0, 0);
+	private static Vehicle vehicle02 = new Vehicle(30000, 34000, 2020, "Toyota", "Camry", "Silver", "638F7dDD8d79D7", "CAR", false, 0, 0);
+	private static Vehicle vehicle03 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Blue", "5H876G7dD8d9HJ", "CAR", true, 3, 12000);
+	
 	public static void executeAllTests() {
 		Test.testClientObject();
 		Test.testSaleRequestObject();
+		Test.testVehicleObject();
 	}
 
 	public static void testClientObject() {
@@ -27,5 +32,12 @@ public class Test {
 		System.out.println("ticket01 ID: " + ticket01.getTicketID() + " Type of Sale: " + ticket01.getTypeOfSale());
 		System.out.println("ticket02 ID: " + ticket02.getTicketID() + " Type of Sale: " + ticket02.getTypeOfSale());
 		System.out.println("ticket02 ID: " + ticket03.getTicketID() + " Type of Sale: " + ticket03.getTypeOfSale());
+	}
+	
+	public static void testVehicleObject() {
+		System.out.println("Test if each vehicle object has a unique id, stock number and a model name:");
+		System.out.println("Vehicle ID: " + vehicle01.getID() + " Stock Number: " + vehicle01.getStockNumber() + " Model: " + vehicle01.getModel());
+		System.out.println("Vehicle ID: " + vehicle02.getID() + " Stock Number: " + vehicle02.getStockNumber() + " Model: " + vehicle02.getModel());
+		System.out.println("Vehicle ID: " + vehicle03.getID() + " Stock Number: " + vehicle03.getStockNumber() + " Model: " + vehicle03.getModel());
 	}
 }
