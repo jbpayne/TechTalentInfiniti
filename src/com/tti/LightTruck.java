@@ -1,28 +1,34 @@
 package com.tti;
 
+// Takes functionality of Vehicle class and adds
+// Towing capacity and Gross Combined Weight Truck Weight and is 4WD as parameters;
 class LightTruck extends Vehicle {
-        private int towingCapacity;
-        private int grossCombinedWeight;
-        private int truckWeight;
-        private boolean is4wd;
+        private int towingCapacity; //Decalres towingCapacity  in lbs. as integer
+        private int grossCombinedWeight;//Declares grossCombinedWeight in lbs. as an integer
+        private int truckWeight;//Declares Truck weight in lbs. as integer
+        private boolean is4wd;//Declare is4wd as Boolean;
 
+        /* Light truck Constructor Code block
+           
 
-      public LightTruck(int wholesaleCost,
+         */
+        public LightTruck(
+         int wholesaleCost,
         int retailPrice,
         int modelYear,
         String make,
         String model,
         String color,
-               String vin,
-               String vehicleType,
-               boolean isLeasable,
-               int leaseTerm,
-               int maxMilesPerYear,
-               int towingCapacity,
-               int grossCombinedWeight,
-               int truckWeight,
-               boolean is4wd) {
-               super(wholesaleCost, retailPrice, modelYear, make, model, color, vin, vehicleType, isLeasable, leaseTerm, maxMilesPerYear);
+        String vin,
+        String vehicleType,
+        boolean isLeasable,
+        int leaseTerm,
+        int maxMilesPerYear,
+        int towingCapacity,
+        int grossCombinedWeight,
+        int truckWeight,
+        boolean is4wd) {
+        super(wholesaleCost, retailPrice, modelYear, make, model, color, vin, vehicleType, isLeasable, leaseTerm, maxMilesPerYear);
         this.grossCombinedWeight = grossCombinedWeight;
         this.towingCapacity = towingCapacity;
         this.truckWeight = truckWeight;
