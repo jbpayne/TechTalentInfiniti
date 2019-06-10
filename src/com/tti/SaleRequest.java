@@ -1,6 +1,6 @@
 package com.tti;
 
-public class SaleRequestTicket {
+public class SaleRequest implements ISaleRequest {
 	
 	private static int idCounter = 0;
 	
@@ -9,7 +9,7 @@ public class SaleRequestTicket {
 	private String typeOfSale;
 	private Object vehicle;
 	
-	SaleRequestTicket(Object client, String typeOfSale, Object vehicle) {
+	SaleRequest(Object client, String typeOfSale, Object vehicle) {
 		this.ticketID = createID();
 		this.setClient(client);
 		this.setTypeOfSale(typeOfSale);

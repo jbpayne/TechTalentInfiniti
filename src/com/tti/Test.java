@@ -6,13 +6,13 @@ public class Test {
 	private static Client client02 = new Client("Teague O'Connor", "2032226868", "23 Swift St. Hartford, CT 06332");
 	private static Client client03 = new Client("John Payne", "2031119999", "23 Bard. Hartford, CT 06332");
 	
-	private static SaleRequestTicket ticket01 = new SaleRequestTicket(client01, "Finance", null);
-	private static SaleRequestTicket ticket02 = new SaleRequestTicket(client02, "Lease", null);
-	private static SaleRequestTicket ticket03 = new SaleRequestTicket(client02, "Full Sale", null);
+	private static SaleRequest ticket01 = new SaleRequest(client01, "Finance", null);
+	private static SaleRequest ticket02 = new SaleRequest(client02, "Lease", null);
+	private static SaleRequest ticket03 = new SaleRequest(client02, "Full Sale", null);
 	
 	public static void executeAllTests() {
 		Test.testClientObject();
-		Test.testSaleRequestTicketObject();
+		Test.testSaleRequestObject();
 	}
 
 	public static void testClientObject() {
@@ -22,8 +22,8 @@ public class Test {
 		System.out.println("client03 ID: " + client03.getId() + " Name: " + client03.getFullName());
 	}
 	
-	public static void testSaleRequestTicketObject() {
-		System.out.println("Test if each Sale Request Ticket Object has a unique id and a type of sale:");
+	public static void testSaleRequestObject() {
+		System.out.println("Test if each sale request object has a unique id and a type of sale:");
 		System.out.println("ticket01 ID: " + ticket01.getTicketID() + " Type of Sale: " + ticket01.getTypeOfSale());
 		System.out.println("ticket02 ID: " + ticket02.getTicketID() + " Type of Sale: " + ticket02.getTypeOfSale());
 		System.out.println("ticket02 ID: " + ticket03.getTicketID() + " Type of Sale: " + ticket03.getTypeOfSale());

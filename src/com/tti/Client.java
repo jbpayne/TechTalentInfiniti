@@ -1,6 +1,6 @@
 package com.tti;
 
-public class Client {
+public class Client implements IClient {
 	
 	private static int idCounter = 0;
 		
