@@ -2,21 +2,25 @@ package com.tti;
 
 public class Vehicle {
 
-    private int vehicleID;
-    private int stockNumber;
-    private int wholesaleCost;
-    private int retailPrice;
-    private int modelYear;
-    private String make;
-    private String model;
-    private String color;
-    private String vin;
+
+    private int vehicleID;//Declares vehicleIDNumber as integer
+    private int stockNumber;//Declares vehicle stock number as integer
+    private int wholesaleCost;//Declares Dealer Wholesale price as integer (represents US Dollars)
+    private int retailPrice;//Declares Dealer Retail price as integer (represents US Dollars)
+    private int modelYear;//Declares vehicle model year as integer (Takes 4 digit integer)
+    private String make;//Declares vehicle make as String
+    private String model;//Declares vehicle model as String
+    private String color;//Declares vehicle color as String
+    private String vin;//Declares vehicle vin as String
     private String vehicleType;// Placeholder until functionality added (Using enum)
-    private boolean isLeasable;
-    private int leaseTerm;
-    private int maxMilesPerYear;
+    private boolean isLeasable;// Declares isLeasable variable as boolean
+    private int leaseTerm;//Declares leaseTerm as integer in months
+    private int maxMilesPerYear;//Declares Max Miles Per Year as integer
+
+    /* Vehicle constructor code block
 
 
+     */
     Vehicle(int vehicleID, int stockNumber,
             int wholesaleCost, int retailPrice,
             int modelYear, String make, String model,
@@ -35,7 +39,10 @@ public class Vehicle {
         this.leaseTerm = leaseTerm;
         this.maxMilesPerYear = maxMilesPerYear;
     }
+    /* Code block Getter and setters code block
 
+
+     */
     public int getVehicleID() {
         return vehicleID;
     }
@@ -200,6 +207,14 @@ public class Vehicle {
         this.maxMilesPerYear = maxMilesPerYear;
     }
 
+    /**
+     * @param  the maxMilesPerYear to set
+     */
+
+    /* End getter and Setter function code block
+
+
+     */
     public float getMileagePenalty() {
         //if//(){
         //{
