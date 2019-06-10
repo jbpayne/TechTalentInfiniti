@@ -8,9 +8,9 @@ public class Main {
 		SaleRequestQueue FinanceQueue = new SaleRequestQueue();
 		SaleRequestQueue LeaseQueue = new SaleRequestQueue();
 		
-		Test.executeAllTests();
+//		Test.executeAllTests();
 		
-//		MenuSystem.loadInitialMenu();
+		MenuSystem.loadInitialMenu();
 
 	}
 
