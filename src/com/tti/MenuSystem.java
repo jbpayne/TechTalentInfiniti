@@ -1,11 +1,12 @@
-package com.tti;
+    package com.tti;
 
 import java.util.Scanner;
 
 public class MenuSystem {
 	
 	static Scanner scanner = new Scanner(System.in);
-	
+
+
 	public static void loadInitialMenu() {
 		System.out.println("Welcome to the Tech Talent Infinity Menu System!\n");
 		System.out.println("1 Front Desk\n2 Finance Representative\n3 Lease Representative:\n4 Full Sale Representative\n");
