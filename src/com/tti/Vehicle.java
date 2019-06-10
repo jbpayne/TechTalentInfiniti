@@ -1,6 +1,6 @@
 package com.tti;
 
-public class Vehicle {
+public class Vehicle implements IVehicle {
 
 	private static int idCounter = 0;
 	
