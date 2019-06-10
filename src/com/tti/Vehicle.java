@@ -47,15 +47,15 @@ public class Vehicle implements IVehicle {
     
     // Code block Getter and setters code block
     public int getID() {
-        return this.id;
+        return id;
     }
 
     public int getStockNumber() {
-        return this.stockNumber;
+        return stockNumber;
     }
 
     public int getWholesaleCost() {
-        return this.wholesaleCost;
+        return wholesaleCost;
     }
 
     public void setWholesaleCost(int wholesaleCost) {
@@ -66,7 +66,7 @@ public class Vehicle implements IVehicle {
      * @return the retailPrice
      */
     public int getRetailPrice() {
-        return this.retailPrice;
+        return retailPrice;
     }
 
     /**
@@ -80,7 +80,7 @@ public class Vehicle implements IVehicle {
      * @return the modelYear
      */
     public int getModelYear() {
-        return this.modelYear;
+        return modelYear;
     }
 
     /**
@@ -94,7 +94,7 @@ public class Vehicle implements IVehicle {
      * @return the make
      */
     public String getMake() {
-        return this.make;
+        return make;
     }
 
     /**
@@ -108,7 +108,7 @@ public class Vehicle implements IVehicle {
      * @return the model
      */
     public String getModel() {
-        return this.model;
+        return model;
     }
 
     /**
@@ -122,7 +122,7 @@ public class Vehicle implements IVehicle {
      * @return the color
      */
     public String getColor() {
-        return this.color;
+        return color;
     }
 
     /**
@@ -136,7 +136,7 @@ public class Vehicle implements IVehicle {
      * @return the vin
      */
     public String getVin() {
-        return this.vin;
+        return vin;
     }
 
     /**
@@ -150,7 +150,7 @@ public class Vehicle implements IVehicle {
      * @return the vehicleType
      */
     public String getVehicleType() {
-        return this.vehicleType;
+        return vehicleType;
     }
 
     /**
@@ -164,7 +164,7 @@ public class Vehicle implements IVehicle {
      * @return the isLeasable
      */
     public boolean isLeasable() {
-        return this.isLeasable;
+        return isLeasable;
     }
 
     /**
@@ -178,7 +178,7 @@ public class Vehicle implements IVehicle {
      * @return the leaseTerm
      */
     public int getLeaseTerm() {
-        return this.leaseTerm;
+        return leaseTerm;
     }
 
     /**
@@ -192,7 +192,7 @@ public class Vehicle implements IVehicle {
      * @return the maxMilesPerYear
      */
     public int getMaxMilesPerYear() {
-        return this.maxMilesPerYear;
+        return maxMilesPerYear;
     }
 
     /**

@@ -21,7 +21,7 @@ public class Client implements IClient {
 	}
 
 	public String getFullName() {
-		return this.fullName;
+		return fullName;
 	}
 
 	public void setFullName(String fullName) {
@@ -29,7 +29,7 @@ public class Client implements IClient {
 	}
 
 	public String getPhoneNumber() {
-		return this.phoneNumber;
+		return phoneNumber;
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
@@ -37,7 +37,7 @@ public class Client implements IClient {
 	}
 
 	public String getAddress() {
-		return this.address;
+		return address;
 	}
 
 	public void setAddress(String address) {
