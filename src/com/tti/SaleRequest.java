@@ -20,8 +20,8 @@ public class SaleRequest implements ISaleRequest {
 		return ticketID;
 	}
 
-	public Object getClient() {
-		return client;
+	public Client getClient() {
+		return (Client) client;
 	}
 
 	public void setClient(Object client) {
@@ -36,8 +36,8 @@ public class SaleRequest implements ISaleRequest {
 		this.typeOfSale = typeOfSale;
 	}
 
-	public Object getVehicle() {
-		return vehicle;
+	public Vehicle getVehicle() {
+		return (Vehicle) vehicle;
 	}
 
 	public void setVehicle(Object vehicle) {
