@@ -35,6 +35,7 @@ public class Vehicle implements IVehicle {
         this.id = getStockNumber();
         this.setWholesaleCost(wholesaleCost);
         this.setRetailPrice(retailPrice);
+        this.setModelYear(modelYear);
         this.setMake(make);
         this.setModel(model);
         this.setColor(color);
