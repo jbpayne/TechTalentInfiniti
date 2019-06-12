@@ -17,11 +17,11 @@ public class Menu {
 		switch(numOption) {
 			case 1: loadFrontDeskMenu(true);
 			break;
-			case 2: SalesMenu.load(Queues.Finance);
+			case 2: SalesMenu.load(2);
 			break;
-			case 3: SalesMenu.load(Queues.Lease);
+			case 3: SalesMenu.load(3);
 			break;
-			case 4: SalesMenu.load(Queues.FullSale);
+			case 4: SalesMenu.load(4);
 			break;
 		}
 	}
@@ -102,67 +102,4 @@ public class Menu {
 		}
 	}
 	
-	private static void loadFinanceMenu() {
-		SaleRequest ticket;
-		Client client;
-		Vehicle vehicle;
-		
-		System.out.println("Loading Finance Rep Menu\n");
-		if(!Queues.Finance.isEmpty()) {
-			do {
-				ticket = (SaleRequest) Queues.Finance.poll();
-				client = ticket.getClient();
-				vehicle = ticket.getVehicle();
-				System.out.println("This is client #" + client.getId());
-				System.out.println("Client info:\nName: " + client.getFullName() + "\nPhone Number: " + client.getPhoneNumber() + "\nAddress: " + client.getAddress());
-				System.out.println("The type of sale is " + ticket.getTypeOfSale());
-				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
-				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!Queues.Finance.isEmpty());
-		}
-		System.out.println("\n");
-	}
-	
-	private static void loadLeasingMenu() {
-		SaleRequest ticket;
-		Client client;
-		Vehicle vehicle;
-		
-		System.out.println("Loading Leasing Rep Menu\n");
-		if(!Queues.Lease.isEmpty()) {
-			do {
-				ticket = (SaleRequest) Queues.Lease.poll();
-				client = ticket.getClient();
-				vehicle = ticket.getVehicle();
-				System.out.println("This is client #" + client.getId());
-				System.out.println("Client info:\nName: " + client.getFullName() + "\nPhone Number: " + client.getPhoneNumber() + "\nAddress: " + client.getAddress());
-				System.out.println("The type of sale is " + ticket.getTypeOfSale());
-				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
-				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!Queues.Lease.isEmpty());
-		}
-		System.out.println("\n");
-	}
-	
-	private static void loadFullSaleMenu() {
-		SaleRequest ticket;
-		Client client;
-		Vehicle vehicle;
-		
-		System.out.println("Loading Full Sale Rep Menu\n");
-		if(!Queues.FullSale.isEmpty()) {
-			do {
-				ticket = (SaleRequest) Queues.FullSale.poll();
-				client = ticket.getClient();
-				vehicle = ticket.getVehicle();
-				System.out.println("This is client #" + client.getId());
-				System.out.println("Client info:\nName: " + client.getFullName() + "\nPhone Number: " + client.getPhoneNumber() + "\nAddress: " + client.getAddress());
-				System.out.println("The type of sale is " + ticket.getTypeOfSale());
-				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
-				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!Queues.FullSale.isEmpty());
-		}
-		System.out.println("\n");
-		
-	}
 }

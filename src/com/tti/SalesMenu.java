@@ -4,12 +4,26 @@ import java.util.Queue;
 
 public class SalesMenu {
 
-	static void load(Queue<Object> myQueue) {
+	static void load(int selection) {
 		SaleRequest ticket;
 		Client client;
 		Vehicle vehicle;
+		Queue<Object> myQueue = null;
+		String myName = null;
 		
-		System.out.println("Loading Finance Rep Menu\n");
+		switch (selection) {
+		case 2: myQueue = Queues.Finance;
+		myName = "Finance";
+			break;
+		case 3: myQueue = Queues.Lease;
+		myName = "Lease";
+			break;
+		case 4: myQueue = Queues.FullSale;
+		myName = "Full Sale";
+			break;
+		}
+		
+		System.out.println("Loading " + myName + " Rep Menu\n");
 		if(!myQueue.isEmpty()) {
 			do {
 				ticket = (SaleRequest) myQueue.poll();
