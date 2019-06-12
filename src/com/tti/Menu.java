@@ -17,11 +17,11 @@ public class Menu {
 		switch(numOption) {
 			case 1: loadFrontDeskMenu(true);
 			break;
-			case 2: loadFinanceMenu();
+			case 2: SalesMenu.load(Queues.Finance);
 			break;
-			case 3: loadLeasingMenu();
+			case 3: SalesMenu.load(Queues.Lease);
 			break;
-			case 4: loadFullSaleMenu();
+			case 4: SalesMenu.load(Queues.FullSale);
 			break;
 		}
 	}
@@ -129,7 +129,7 @@ public class Menu {
 		Vehicle vehicle;
 		
 		System.out.println("Loading Leasing Rep Menu\n");
-		if(!Queues.Finance.isEmpty()) {
+		if(!Queues.Lease.isEmpty()) {
 			do {
 				ticket = (SaleRequest) Queues.Lease.poll();
 				client = ticket.getClient();
@@ -139,7 +139,7 @@ public class Menu {
 				System.out.println("The type of sale is " + ticket.getTypeOfSale());
 				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
 				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!Queues.Finance.isEmpty());
+			} while(!Queues.Lease.isEmpty());
 		}
 		System.out.println("\n");
 	}
@@ -150,7 +150,7 @@ public class Menu {
 		Vehicle vehicle;
 		
 		System.out.println("Loading Full Sale Rep Menu\n");
-		if(!Queues.Finance.isEmpty()) {
+		if(!Queues.FullSale.isEmpty()) {
 			do {
 				ticket = (SaleRequest) Queues.FullSale.poll();
 				client = ticket.getClient();
@@ -160,7 +160,7 @@ public class Menu {
 				System.out.println("The type of sale is " + ticket.getTypeOfSale());
 				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
 				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!Queues.Finance.isEmpty());
+			} while(!Queues.FullSale.isEmpty());
 		}
 		System.out.println("\n");
 		
