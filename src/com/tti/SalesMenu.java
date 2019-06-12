@@ -23,7 +23,7 @@ public class SalesMenu {
 			break;
 		}
 		
-		System.out.println("Loading " + myName + " Rep Menu\n");
+		System.out.println("Loading " + myName + " Rep Menu...\n\n");
 		if(!myQueue.isEmpty()) {
 			do {
 				ticket = (SaleRequest) myQueue.poll();
@@ -41,3 +41,28 @@ public class SalesMenu {
 
 	
 }
+
+//Sample menu output:
+//Would you like to view the next client? (Y/N) Y
+//
+//Client Information:
+//Name: Mamadou Wann
+//Phone Number: (555)867-5309
+//Address: 20 Church St, Hartford, CT
+//
+//Vehicle:
+//Stock Number: 4
+//Year: 2019
+//Make: Infiniti
+//Model: QX80
+//Color: Blue
+//Retail Price: $62,590
+//Wholesale Cost: $55,000
+//Towing Capacity: 8500 lbs.
+//Gross Combined Weight: 15000 lbs.
+//Truck Weight: 7385 lbs.
+//4WD: Yes
+//
+//Remove client from the queue? (Y/N) Y
+//
+//Was the sale completed? (Y/N)
