@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-//import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,13 +15,6 @@ public class VehicleInventoryTest {
 	public void setup() {
 		VehicleInventory.populateHashMap();
 	}
-//	@AfterEach
-//	public void clear() {
-//		for (int i = 1; i <= VehicleInventory.getVehicleInventory().size(); i++) {
-//	    	VehicleInventory.removeVehicle(i);
-//		}
-//	}
-
 	
     // Test for the presence of a specific vehicle in the output
     @Test
@@ -34,6 +26,7 @@ public class VehicleInventoryTest {
     	assertTrue(outContent.toString().contains("2019 Purple Toyota Prius"));
     }
 	
+    // Test for presence of a vehicle in the hashmap before and after removeVehicle method
     @Test
     public void removeVehicleTest() {
     	assertTrue(VehicleInventory.getVehicleInventory().containsKey(5));
