@@ -6,7 +6,9 @@ public class Main {
 				
 //		Test.executeAllTests();
 		VehicleInventory.populateHashMap();
+		while (true) {
 		Menu.loadMainMenu();
+		}
 	}
 
 }
