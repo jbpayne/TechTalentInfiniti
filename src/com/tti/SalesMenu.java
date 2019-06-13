@@ -1,8 +1,11 @@
 package com.tti;
 
 import java.util.Queue;
+import java.util.Scanner;
 
 public class SalesMenu {
+	
+	static Scanner scanner = new Scanner(System.in);
 
 	static void load(int selection) {
 		SaleRequest ticket;
@@ -10,6 +13,7 @@ public class SalesMenu {
 		Vehicle vehicle;
 		Queue<Object> myQueue = null;
 		String myName = null;
+		String input = null;
 		
 		switch (selection) {
 		case 2: myQueue = Queues.Finance;
@@ -25,44 +29,51 @@ public class SalesMenu {
 		
 		System.out.println("Loading " + myName + " Rep Menu...\n\n");
 		if(!myQueue.isEmpty()) {
-			do {
-				ticket = (SaleRequest) myQueue.poll();
+			System.out.println("Would you like to view the next client? (Y/N)");
+			input = scanner.next();
+			if (input.toLowerCase().contains("y")) {
+				
+				ticket = (SaleRequest) myQueue.peek();
 				client = ticket.getClient();
 				vehicle = ticket.getVehicle();
-				System.out.println("This is client #" + client.getId());
-				System.out.println("Client info:\nName: " + client.getFullName() + "\nPhone Number: " + client.getPhoneNumber() + "\nAddress: " + client.getAddress());
-				System.out.println("The type of sale is " + ticket.getTypeOfSale());
-				System.out.println("The stock number of the chosen vehicle is " + vehicle.getStockNumber());
-				System.out.println("Vehicle Info:\nMake: " + vehicle.getMake() + "\nModel " + vehicle.getModel() + "\n");
-			} while(!myQueue.isEmpty());
+				
+				System.out.println("Client Information:\n");
+				System.out.println("Name: " + client.getFullName());
+				System.out.println("Phone Number: " + client.getPhoneNumber());
+				System.out.println("Address: " + client.getAddress() + "\n");
+				System.out.println("Vehicle:\n");
+				System.out.println("Stock Number: " + vehicle.getStockNumber());
+				System.out.println("VIN: " + vehicle.getVin());
+				System.out.println("Year: " + vehicle.getModelYear());
+				System.out.println("Make: " + vehicle.getMake());
+				System.out.println("Model: " + vehicle.getModel());
+				System.out.println("Color: " + vehicle.getColor());
+				System.out.println("Retail Price: " + vehicle.getRetailPrice());
+				System.out.println("Wholesale Price: " + vehicle.getWholesaleCost());
+				if (vehicle.getVehicleType() == "LightTruck") {
+					System.out.println("Towing Capacity: " + " lbs.");
+					System.out.println("Gross Combined Weight: " + " lbs.");
+					System.out.println("Truck Weight: " + " lbs.");
+					System.out.println("4WD: " + " lbs.");
+				}
+				System.out.println("Remove client from the queue? (Y/N)");
+				input = scanner.next();
+				if (input.toLowerCase().contains("y")) {
+					myQueue.remove();
+					System.out.println("Was the sale completed? (Y/N)");
+					input = scanner.next();
+					if (input.toLowerCase().contains("y")) {
+						VehicleInventory.removeVehicle(vehicle.getStockNumber());;
+					}
+					
+					
+				}
+
+			}
+
 		}
-		System.out.println("\n");
 	}
 
 	
 }
 
-//Sample menu output:
-//Would you like to view the next client? (Y/N) Y
-//
-//Client Information:
-//Name: Mamadou Wann
-//Phone Number: (555)867-5309
-//Address: 20 Church St, Hartford, CT
-//
-//Vehicle:
-//Stock Number: 4
-//Year: 2019
-//Make: Infiniti
-//Model: QX80
-//Color: Blue
-//Retail Price: $62,590
-//Wholesale Cost: $55,000
-//Towing Capacity: 8500 lbs.
-//Gross Combined Weight: 15000 lbs.
-//Truck Weight: 7385 lbs.
-//4WD: Yes
-//
-//Remove client from the queue? (Y/N) Y
-//
-//Was the sale completed? (Y/N)
