@@ -71,8 +71,8 @@ public class Menu {
 			VehicleInventory.printInventory();
 			System.out.print("\nPlease enter the client's chosen vehicle stock number: ");
 			vehicleStockNumber = scanner.nextInt();
-			vehicle = VehicleInventory.getVehicleInventory().get(vehicleStockNumber - 1);
-//			VehicleInventory.getVehicleInventory().remove(vehicleStockNumber - 1);
+			vehicle = VehicleInventory.getVehicleInventory().get(vehicleStockNumber);
+//			VehicleInventory.getVehicleInventory().remove(vehicleStockNumber);
 			
 			switch(salesNumber) {
 			case 1: ticket = new SaleRequest(client, "Full Sale", vehicle);
