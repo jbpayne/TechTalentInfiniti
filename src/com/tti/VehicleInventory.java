@@ -39,4 +39,8 @@ public class VehicleInventory {
 	    				);
 	    	}
 	    }
+	    
+	    public static void removeVehicle(int key) {
+	    	inventory.remove(key);
+	    }
 }
