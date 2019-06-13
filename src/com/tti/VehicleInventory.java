@@ -13,7 +13,7 @@ public class VehicleInventory {
 	    	Vehicle vehicle1 = new Vehicle(20000, 22000, 2019, "Toyota", "Corolla", "Black", "36876G7dD8d9HJ", "CAR", false, 0, 0);
 	    	Vehicle vehicle2 = new Vehicle(30000, 34000, 2020, "Toyota", "Camry", "Silver", "638F7dDD8d79D7", "CAR", false, 0, 0);
 	    	Vehicle vehicle3 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Blue", "5H876G7dD8d9HJ", "CAR", true, 3, 12000);
-	    	Vehicle vehicle4 = new Vehicle(32000, 38000, 2020, "Toyota", "Avalon", "Red", "111HH4jdD8d9HJ", "CAR", false, 0, 0);
+	    	Vehicle vehicle4 = new Vehicle(32000, 38000, 2020, "Toyota", "Avalon", "Red", "111HH4JDD8d9HJ", "CAR", false, 0, 0);
 	    	Vehicle vehicle5 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Purple", "5k54kk5G7dD8d9HJ", "CAR", true, 3, 12000);
 	    	Vehicle vehicle6 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Grey", "F9SH9H349HSDU", "CAR", true, 3, 12000);
 	    	Vehicle vehicle7 = new Vehicle(20000, 22000, 2018, "Toyota", "Corolla", "Orange", "44JF34JF9H444", "CAR", false, 0, 0);
@@ -22,21 +22,23 @@ public class VehicleInventory {
 	    	
 	    	Vehicle[] VehicleArray = {vehicle1, vehicle2, vehicle3, vehicle4, vehicle5, vehicle6, vehicle7, vehicle8, vehicle9};
 	    	
-	    	for(int i = 0; i < 9; i++) {
-	    		inventory.put(i, VehicleArray[i]);
+	    	for(int i = 0; i < VehicleArray.length; i++) {
+	    		inventory.put(VehicleArray[i].getStockNumber(), VehicleArray[i]);
 	    	}
 	    }
 	    public static void printInventory() {
-	    	Vehicle vehicle;
-	    	for(int i = 0; i < inventory.size(); i++) {
-	    		vehicle = inventory.get(i);
+	    	inventory.forEach((key, value) -> {
 	    		System.out.println(
-	    				vehicle.getStockNumber() + " " + 
-	    				vehicle.getModelYear() + " " + 
-	    				vehicle.getColor() + " " + 
-	    				vehicle.getMake() + " " + 
-	    				vehicle.getModel() + " "
+	    				inventory.get(key).getStockNumber() + " " + 
+	    				inventory.get(key).getModelYear() + " " + 
+	    				inventory.get(key).getColor() + " " + 
+	    				inventory.get(key).getMake() + " " + 
+	    				inventory.get(key).getModel() + " "
 	    				);
-	    	}
+	    	});
+	    }
+	    
+	    public static void removeVehicle(int key) {
+	    	inventory.remove(key);
 	    }
 }

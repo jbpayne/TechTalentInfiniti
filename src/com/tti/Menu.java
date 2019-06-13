@@ -76,22 +76,19 @@ public class Menu {
 			VehicleInventory.printInventory();
 			System.out.print("\nPlease enter the client's chosen vehicle stock number: ");
 			vehicleStockNumber = scanner.nextInt();
-			vehicle = VehicleInventory.getVehicleInventory().get(vehicleStockNumber - 1);
-//			VehicleInventory.getVehicleInventory().remove(vehicleStockNumber - 1);
 
-			switch (salesNumber) {
-			case 1:
-				ticket = new SaleRequest(client, "Full Sale", vehicle);
-				Queues.FullSale.add(ticket);
-				break;
-			case 2:
-				ticket = new SaleRequest(client, "Finance", vehicle);
-				Queues.Finance.add(ticket);
-				break;
-			case 3:
-				ticket = new SaleRequest(client, "Lease", vehicle);
-				Queues.Lease.add(ticket);
-				break;
+			vehicle = VehicleInventory.getVehicleInventory().get(vehicleStockNumber);
+			
+			switch(salesNumber) {
+			case 1: ticket = new SaleRequest(client, "Full Sale", vehicle);
+					Queues.FullSale.add(ticket);
+					break;
+			case 2: ticket = new SaleRequest(client, "Finance", vehicle);
+					Queues.Finance.add(ticket);
+					break;
+			case 3: ticket = new SaleRequest(client, "Lease", vehicle);
+					Queues.Lease.add(ticket);
+					break;
 			}
 
 			System.out.print("Would you like to add another client? (Y/N): ");
