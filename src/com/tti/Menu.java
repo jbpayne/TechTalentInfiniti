@@ -11,7 +11,19 @@ public class Menu {
 		System.out.println(
 				"1 Front Desk\n2 Finance Representative\n3 Lease Representative:\n4 Full Sale Representative\n");
 		System.out.print("Please enter the number for your job role: ");
-		chooseMenuOptions(scanner.nextInt());
+		
+		try {
+			chooseMenuOptions(scanner.nextInt()); // function only accepts numbers from 1 - 4 as valid input
+		} catch(Exception e) { // handles any non-integer, invalid user input
+			System.out.println("\nPlease enter a valid menu option.\n");
+			/*
+			 *  When nextInt() throws an exception, the Scanner object tries to use the same string 
+			 *  on the next call and will create an infinite loop, since the loadMainMenu() function 
+			 *  is contained within a while loop in main.java.
+			 *  Calling nextLine() within the catch will discard the illegal line and prevent the infinite loop.
+			 */
+			scanner.nextLine(); 
+		}
 	}
 
 	private static void chooseMenuOptions(int numOption) {
@@ -28,6 +40,10 @@ public class Menu {
 		case 4:
 			SalesMenu.load(4);
 			break;
+		default : // Number entries outside of 1 - 4 are invalid.
+			// Any number entries outside of 1 - 4 will print out the message below. 
+			// Then, the main menu will reload.
+			System.out.println("\nPlease enter a valid menu option.\n");
 		}
 	}
 
