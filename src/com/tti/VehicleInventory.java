@@ -18,7 +18,7 @@ public class VehicleInventory {
 	    	Vehicle vehicle6 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Grey", "F9SH9H349HSDU", "CAR", true, 3, 12000);
 	    	Vehicle vehicle7 = new Vehicle(20000, 22000, 2018, "Toyota", "Corolla", "Orange", "44JF34JF9H444", "CAR", false, 0, 0);
 	    	Vehicle vehicle8 = new Vehicle(30000, 34000, 2020, "Toyota", "Camry", "Silver", "F98NE97RN9SNF", "CAR", true, 3, 12000);
-	    	Vehicle vehicle9 = new Vehicle(36000, 42000, 2019, "Toyota", "Prius", "Metallic Blue", "498FN9834N93477F", "CAR", true, 3, 12000);
+	    	LightTruck vehicle9 = new LightTruck(36000, 42000, 2019, "Toyota", "Tundra", "Metallic Blue", "498FN9834N93477F", "CAR", true, 3, 12000, 8500, 15000, 7385, true);
 	    	
 	    	Vehicle[] VehicleArray = {vehicle1, vehicle2, vehicle3, vehicle4, vehicle5, vehicle6, vehicle7, vehicle8, vehicle9};
 	    	
