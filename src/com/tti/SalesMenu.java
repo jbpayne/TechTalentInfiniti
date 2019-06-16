@@ -78,7 +78,9 @@ public class SalesMenu {
 					if (input.toLowerCase().contains("y")) {
 						VehicleInventory.removeVehicle(vehicle.getStockNumber());;
 					}
-
+					else {
+						vehicle.setActive(false);
+					}
 
 				}
 
