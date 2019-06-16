@@ -2,8 +2,8 @@ package com.tti;
 
 // Takes functionality of Vehicle class and adds
 // Towing capacity and Gross Combined Weight Truck Weight and is 4WD as parameters;
-class LightTruck extends Vehicle {
-        private int towingCapacity; //Decalres towingCapacity  in lbs. as integer
+class LightTruck extends Vehicle implements IVehicle, ILightTruck {
+        private int towingCapacity; //Declares towingCapacity  in lbs. as integer
         private int grossCombinedWeight;//Declares grossCombinedWeight in lbs. as an integer
         private int truckWeight;//Declares Truck weight in lbs. as integer
         private boolean is4wd;//Declare is4wd as Boolean;

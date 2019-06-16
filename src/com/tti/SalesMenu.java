@@ -53,11 +53,22 @@ public class SalesMenu {
 				System.out.println("Color: " + vehicle.getColor());
 				System.out.println("Retail Price: $" + NumberFormat.getInstance().format(vehicle.getRetailPrice()));
 				System.out.println("Wholesale Price: $" + NumberFormat.getInstance().format(vehicle.getWholesaleCost()));
-				if (vehicle.getVehicleType() == "LightTruck") {
-					System.out.println("Towing Capacity: " + " lbs.");
-					System.out.println("Gross Combined Weight: " + " lbs.");
-					System.out.println("Truck Weight: " + " lbs.");
-					System.out.println("4WD: " + " lbs.");
+				if (vehicle.getVehicleType() == "TRUCK") {
+					System.out.println("Towing Capacity: " + 
+							NumberFormat.getInstance().format(((LightTruck) vehicle).getTowingCapacity()) + 
+							" lbs.");
+					System.out.println("Gross Combined Weight: " + 
+							NumberFormat.getInstance().format(((LightTruck) vehicle).getGrossCombinedWeight()) + 
+							" lbs.");
+					System.out.println("Truck Weight: " + 
+							NumberFormat.getInstance().format(((LightTruck) vehicle).getTruckWeight()) + 
+							" lbs.");
+					if (((LightTruck) vehicle).isIs4wd()) {
+						System.out.println("4WD: Yes" );
+					}
+					else {
+						System.out.println("4WD: No" );
+					}
 				}
 				if (leaseFilter) {
 					System.out.println("\r\nVehicle Lease Details:\r\n");
