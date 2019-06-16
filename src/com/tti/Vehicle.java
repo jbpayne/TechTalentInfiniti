@@ -14,6 +14,7 @@ public class Vehicle implements IVehicle {
     private String color; //Declares vehicle color as String
     private String vin; //Declares vehicle vin as String
     private String vehicleType; // Placeholder until functionality added (Using enum)
+    private boolean isActive; //True when added to a Sale Request
     private boolean isLeasable; // Declares isLeasable variable as boolean
     private int leaseTerm; //Declares leaseTerm as integer in months
     private int maxMilesPerYear; //Declares Max Miles Per Year as integer
@@ -41,6 +42,7 @@ public class Vehicle implements IVehicle {
         this.setColor(color);
         this.setVin(vin);
         this.setVehicleType(vehicleType);
+        this.isActive = false;
         this.setLeasable(isLeasable);
         this.setLeaseTerm(leaseTerm);
         this.setMaxMilesPerYear(maxMilesPerYear);
@@ -162,6 +164,20 @@ public class Vehicle implements IVehicle {
     }
 
     /**
+	 * @return the isActive
+	 */
+	public boolean isActive() {
+		return isActive;
+	}
+
+	/**
+	 * @param isActive the isActive to set
+	 */
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	/**
      * @return the isLeasable
      */
     public boolean isLeasable() {

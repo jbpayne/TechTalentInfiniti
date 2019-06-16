@@ -61,6 +61,7 @@ public class FrontDeskMenu {
 			
 			System.out.print("\nPlease enter the client's chosen vehicle stock number: ");
 			vehicle = VehicleInventory.getVehicleInventory().get(scanner.nextInt());
+			vehicle.setActive(true);
 			
 			switch(salesPreferenceNumber) {
 			// Create a sale request ticket and store in the Finance queue
