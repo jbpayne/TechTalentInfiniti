@@ -72,6 +72,12 @@ public class SalesMenu {
 			}
 
 		}
+		
+		else {
+			System.out.println("No clients are in the queue. Please come back later.\r\n" + 
+					"Press Enter.");
+			input = scanner.nextLine();
+		}
 	}
 
 
