@@ -50,11 +50,17 @@ public class SalesMenu {
 				System.out.println("Color: " + vehicle.getColor());
 				System.out.println("Retail Price: " + vehicle.getRetailPrice());
 				System.out.println("Wholesale Price: " + vehicle.getWholesaleCost());
-				if (vehicle.getVehicleType() == "LightTruck") {
-					System.out.println("Towing Capacity: " + " lbs.");
-					System.out.println("Gross Combined Weight: " + " lbs.");
-					System.out.println("Truck Weight: " + " lbs.");
-					System.out.println("4WD: " + " lbs.");
+				if (vehicle.getVehicleType() == "TRUCK") {
+					System.out.println("Towing Capacity: " + ((LightTruck) vehicle).getTowingCapacity() + " lbs.");
+					System.out.println("Gross Combined Weight: " + ((LightTruck) vehicle).getGrossCombinedWeight() + " lbs.");
+					System.out.println("Truck Weight: " + ((LightTruck) vehicle).getTruckWeight() + " lbs.");
+					if (((LightTruck) vehicle).isIs4wd()) {
+						System.out.println("4WD: Yes" );
+					}
+					else {
+						System.out.println("4WD: No" );
+					}
+					
 				}
 				System.out.println("Remove client from the queue? (Y/N)");
 				input = scanner.next();
