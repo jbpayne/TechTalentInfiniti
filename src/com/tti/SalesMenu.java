@@ -64,8 +64,8 @@ public class SalesMenu {
 					System.out.println("Lease Term: " + vehicle.getLeaseTerm() + " Months");
 					System.out.println("Maximum Mileage Per Year: " + NumberFormat.getInstance().format(vehicle.getMaxMilesPerYear()));
 					System.out.println("Mileage Penalty (Per 5000 Miles): $" + String.format( "%.2f", vehicle.getMileagePenalty()));
-
-
+					
+					leaseFilter = false;
 				}
 				System.out.println("Remove client from the queue? (Y/N)");
 				input = scanner.next();
