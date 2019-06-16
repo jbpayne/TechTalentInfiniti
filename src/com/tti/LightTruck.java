@@ -28,7 +28,7 @@ class LightTruck extends Vehicle {
         int grossCombinedWeight,
         int truckWeight,
         boolean is4wd) {
-        super(wholesaleCost, retailPrice, modelYear, make, model, color, vin, vehicleType, isLeasable, leaseTerm, maxMilesPerYear);
+        super(wholesaleCost, retailPrice, modelYear, make, model, color, vin, vehicleType = "TRUCK", isLeasable, leaseTerm, maxMilesPerYear);
         this.grossCombinedWeight = grossCombinedWeight;
         this.towingCapacity = towingCapacity;
         this.truckWeight = truckWeight;
