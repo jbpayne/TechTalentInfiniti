@@ -22,7 +22,7 @@ public class VehicleInventoryTest {
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-    	VehicleInventory.printInventory();
+    	VehicleInventory.printInventory(true);
     	assertTrue(outContent.toString().contains("2019 Purple Toyota Prius"));
     }
 	

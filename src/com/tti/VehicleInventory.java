@@ -26,8 +26,9 @@ public class VehicleInventory {
 	    		inventory.put(VehicleArray[i].getStockNumber(), VehicleArray[i]);
 	    	}
 	    }
-	    public static void printInventory() {
+	    public static void printInventory(boolean leaseFilter) {
 	    	inventory.forEach((key, value) -> {
+	    		if (!leaseFilter) {
 	    		System.out.println(
 	    				inventory.get(key).getStockNumber() + " " + 
 	    				inventory.get(key).getModelYear() + " " + 
@@ -35,6 +36,16 @@ public class VehicleInventory {
 	    				inventory.get(key).getMake() + " " + 
 	    				inventory.get(key).getModel() + " "
 	    				);
+	    		}
+	    		else if (inventory.get(key).isLeasable()) {
+		    		System.out.println(
+		    				inventory.get(key).getStockNumber() + " " + 
+		    				inventory.get(key).getModelYear() + " " + 
+		    				inventory.get(key).getColor() + " " + 
+		    				inventory.get(key).getMake() + " " + 
+		    				inventory.get(key).getModel() + " "
+		    				);
+	    		}
 	    	});
 	    }
 	    
