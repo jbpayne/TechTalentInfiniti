@@ -15,6 +15,7 @@ public class FrontDeskMenu {
 		String address = null;
 		Vehicle vehicle;
 		int salesPreferenceNumber;
+		boolean leaseFilter;
 
 		if (firstTimeLoading) {
 			System.out.print("Are you ready to enter new client information? (Y/N): ");
@@ -54,10 +55,16 @@ public class FrontDeskMenu {
 			
 			// Collect sale preference input
 			salesPreferenceNumber = scanner.nextInt();
+			if (salesPreferenceNumber == 2) {
+				leaseFilter = true;
+			}
+			else {
+				leaseFilter = false;
+			}
 
 			// Print out current vehicle inventory
 			System.out.println("\nCurrent vehicle inventory: ");
-			VehicleInventory.printInventory();
+			VehicleInventory.printInventory(leaseFilter);
 			
 			System.out.print("\nPlease enter the client's chosen vehicle stock number: ");
 			vehicle = VehicleInventory.getVehicleInventory().get(scanner.nextInt());
