@@ -137,7 +137,7 @@ public class FrontDeskMenu {
 				break;
 		}
 		
-		String message = "\r\nPlease inform the client that the " + office + " Office is currently closed, but will reopen tomorrow at " + open;
+		String message = "\r\nPlease inform the client that the " + office + " Office is currently closed, but will reopen tomorrow at " + open + ".";
 
 		if (now.isBefore(open) || now.isAfter(close)) {
 			System.out.println(message);
