@@ -62,8 +62,8 @@ Takes user input, stored as Client object, then creates a SaleRequest object, in
 <h5>Queues.java class</h5>
 Data Structures used to store the SaleRequest objects and return them in the same order they were stored.
 Imports Libraries: 
-`java.util.ArrayDeque`
-`java.util.Queue`
+```java.util.ArrayDeque
+java.util.Queue```
 - Instantiates a new instance of the FullSale queue.
 - Instantiates a new instance of the Finance queue.
 - Instantiate a new instance of Lease queue.
