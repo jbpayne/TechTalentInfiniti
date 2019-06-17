@@ -8,6 +8,8 @@ public class MainMenu {
 
 	// Loads the main menu
 	public static void load() {
+		
+		clearScreen();
 	
 		System.out.println("Welcome to the Tech Talent Infinity Menu System!\n");
 		System.out.println(
@@ -28,18 +30,24 @@ public class MainMenu {
 	// Method takes a user validated input to load the corresponding menu
 	private static void chooseMenuOptions(int numOption) {
 		switch (numOption) {
-		case 1:
+		case 1: clearScreen();
 			FrontDeskMenu.load(true); // Front Desk menu loaded
 			break;
-		case 2:
+		case 2: clearScreen();
 			SalesMenu.load(2); // Finance menu loaded
 			break;
-		case 3:
+		case 3: clearScreen();
 			SalesMenu.load(3); // Lease menu loaded
 			break;
-		case 4:
+		case 4: clearScreen();
 			SalesMenu.load(4); // Full Sale menu loaded
 			break;
+		}
+	}
+	
+	public static void clearScreen() {
+		for (int i = 1; i <= 50; i++) {
+			System.out.println();
 		}
 	}
 

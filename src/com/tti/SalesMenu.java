@@ -31,9 +31,15 @@ public class SalesMenu {
 		}
 
 		System.out.println("Loading " + myName + " Rep Menu...\n\n");
+
+		MainMenu.clearScreen();
+		
 		if(!myQueue.isEmpty()) {
 			System.out.println("Would you like to view the next client? (Y/N)");
 			input = scanner.next();
+			
+			MainMenu.clearScreen();
+
 			if (input.toLowerCase().contains("y")) {
 
 				ticket = (SaleRequest) myQueue.peek();
@@ -78,11 +84,11 @@ public class SalesMenu {
 					
 					leaseFilter = false;
 				}
-				System.out.println("Remove client from the queue? (Y/N)");
+				System.out.println("\r\nRemove client from the queue? (Y/N)");
 				input = scanner.next();
 				if (input.toLowerCase().contains("y")) {
 					myQueue.remove();
-					System.out.println("Was the sale completed? (Y/N)");
+					System.out.println("\r\nWas the sale completed? (Y/N)");
 					input = scanner.next();
 					if (input.toLowerCase().contains("y")) {
 						VehicleInventory.removeVehicle(vehicle.getStockNumber());;

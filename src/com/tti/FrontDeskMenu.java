@@ -23,6 +23,7 @@ public class FrontDeskMenu {
 			response = scanner.next().toLowerCase();;
 		}
 		
+		MainMenu.clearScreen();
 		// Collect user input for sale request ticket creation
 		if (!firstTimeLoading || response.contains("y") || response.contains("yes")) {
 			// Collect full name input
@@ -43,6 +44,8 @@ public class FrontDeskMenu {
 
 			// Create client instance
 			Client client = new Client(fullName, phoneNumber, address);
+			
+			MainMenu.clearScreen();
 
 			// Run sale preference options menu
 			loadSalePreferenceMenu(true);
@@ -62,6 +65,8 @@ public class FrontDeskMenu {
 			else {
 				leaseFilter = false;
 			}
+			
+			MainMenu.clearScreen();
 
 			// Print out current vehicle inventory
 			System.out.println("\nCurrent vehicle inventory: ");
@@ -83,6 +88,8 @@ public class FrontDeskMenu {
 					break;
 			}
 			
+			MainMenu.clearScreen();
+
 			checkHours(salesPreferenceNumber);
 
 			System.out.print("\nWould you like to add another client? (Y/N): ");
@@ -107,9 +114,9 @@ public class FrontDeskMenu {
 	private static void loadSalePreferenceMenu(boolean firstPass) {
 		
 			if(firstPass) {
-				System.out.println("\nPlease enter the client's sale's preference:\n");
+				System.out.println("\nPlease enter the client's sales preference:\n");
 			} else {
-				System.out.println("\nPlease enter a valid sale's preference option:\n");
+				System.out.println("\nPlease enter a valid sales preference option:\n");
 			}
 			
 			System.out.println("1 Finance\n2 Lease\n3 Full Sale");
