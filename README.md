@@ -39,7 +39,7 @@ The Vehicle class implements the IVehicle.java interface. The Vehicle Class cons
 <h5>ILightTruck Interface</h5>
 Contains methods implemented by LightTruck.java Class
 
-<h5>ILightTruck.java Class</h5>
+<h5>LightTruck.java Class</h5>
 Vehicles are broken into two types: vehicle and light truck. The LightTruck class extends the Vehicle class and implements IVehicle and ILightTruck interfaces. Getter and Setter functions are created within the class in order to make the data available within the package.
 
 <h5>IClient.java Interface</h5>
