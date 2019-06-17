@@ -28,7 +28,7 @@ Please visit the [Release](https://github.com/jbpayne/TechTalentInfiniti/release
 
 
 <h3>Individual Program Structure:</h3>
-Program files reside in the `com.tti` package within `src/com/tti`
+Program files reside in the com.tti package within src/com/tti
 
 <h5>IVehicle.java Interface</h5>
 Contains methods implemented by Vehicle.java Class
