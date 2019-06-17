@@ -228,13 +228,12 @@ public class Vehicle implements IVehicle {
 
      */
     public float getMileagePenalty() {
-        //if//(){
-        //{
-        //return null;
-
-//		}//
-        //	else{
+        if (retailPrice > 35000) {
+        	return retailPrice / 70;
+        }
+        else {
         return 500.0f;
+        }
     }
     
 	private static int createStockNumber() {
