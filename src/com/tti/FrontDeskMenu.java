@@ -131,7 +131,7 @@ public class FrontDeskMenu {
 		
 		switch(salesPreferenceNumber) {
 		case 1: office = "Finance";
-			open = LocalTime.parse("9:00");
+			open = LocalTime.parse("09:00");
 			close = LocalTime.parse("18:00");
 				break;
 		case 2: office = "Lease";
