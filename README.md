@@ -31,22 +31,25 @@ Please visit the [Release](https://github.com/jbpayne/TechTalentInfiniti/release
 Program files reside in the `com.tti` package within `src/com/tti`
 
 <h5>IVehicle.java Interface</h5>
-Contains methods used to implement Vehicle.java Class
+Contains methods implemented by Vehicle.java Class
 
 <h5>Vehicle.java Class</h5>
 The Vehicle class implements the IVehicle.java interface. The Vehicle Class constructs the Vehicle object, in which the vehicle information is stored. Getter and Setter functions are created within the class in order to make the data available within the package.
 
 <h5>ILightTruck Interface</h5>
+Contains methods implemented by LightTruck.java Class
+
+<h5>ILightTruck.java Class</h5>
 Vehicles are broken into two types: vehicle and light truck. The LightTruck class extends the Vehicle class and implements IVehicle and ILightTruck interfaces. Getter and Setter functions are created within the class in order to make the data available within the package.
 
 <h5>IClient.java Interface</h5>
-Contains Methods used to implement Client.java Class
+Contains Methods implemented by Client.java Class
 
 <h5>Client.java Class</h5>
 Client.java class implements the IClient.java interface. The Client Class then constructs the Client Object, which is used to store Client information. Client information (Full Name, Address, Phone, Number and id number) is then stored in the Client object. Getter and Setter functions are created within the class in order to make the data available within the package.
 
 <h5>ISaleRequest.java Interface</h5>
-Contains Methods used to implement SaleRequest.java Class
+Contains Methods implemented by SaleRequest.java Class
 
 <h5>SaleRequest.java Class</h5>
 SalesRequest Class implements the  ISaleRequest.java Class, which abstracts the corresponding variables and methods. The SalesRequest.java class constructs the SalesRequest object, with parameters (Vehicle Object, Type of Sale String and Client Object). The SalesRequest Object will then be used to match a customer to a vehicle.
