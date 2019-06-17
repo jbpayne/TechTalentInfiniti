@@ -2,7 +2,7 @@
 
 <h4>Tech Talent Infiniti Car Dealership Sale Request Creation And Management Tool</h4>
 
-<h5>Created by Jordan Mor, Jonathan Payne, and Teague O'Connor</h5>
+<h5>Created by Jonathan Payne, Jordan Mor and Teague O'Connor</h5>
 <h5>Copyright &copy; 2019. All Rights Reserved&reg;</h5>
 
 Developed using Eclipse version: `2019-03 (4.11.0)`
