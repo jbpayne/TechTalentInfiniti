@@ -1,5 +1,6 @@
 package com.tti;
 
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class FrontDeskMenu {
@@ -81,6 +82,8 @@ public class FrontDeskMenu {
 			case 3: Queues.FullSale.add(new SaleRequest(client, "Full Sale", vehicle));
 					break;
 			}
+			
+			checkHours(salesPreferenceNumber);
 
 			System.out.print("\nWould you like to add another client? (Y/N): ");
 			response = scanner.next().toLowerCase();
@@ -111,5 +114,34 @@ public class FrontDeskMenu {
 			
 			System.out.println("1 Finance\n2 Lease\n3 Full Sale");
 			System.out.print("\nEnter number: ");
+	}
+	
+	private static void checkHours(int salesPreferenceNumber) {
+		LocalTime now = LocalTime.now();
+		LocalTime open = null;
+		LocalTime close = null;
+		String office = null;
+		
+		switch(salesPreferenceNumber) {
+		case 1: office = "Finance";
+			open = LocalTime.parse("11:00");
+			close = LocalTime.parse("19:00");
+				break;
+		case 2: office = "Lease";
+			open = LocalTime.parse("08:00");
+			close = LocalTime.parse("17:00");
+				break;
+		case 3: office = "Full Sale";
+			open = LocalTime.parse("10:00");
+			close = LocalTime.parse("15:00");
+				break;
+		}
+		
+		String message = "\r\nPlease inform the client that the " + office + " Office is currently closed, but will reopen tomorrow at " + open + ".";
+
+		if (now.isBefore(open) || now.isAfter(close)) {
+			System.out.println(message);
+		}
+
 	}
 }
