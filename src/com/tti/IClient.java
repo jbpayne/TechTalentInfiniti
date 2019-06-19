@@ -1,5 +1,9 @@
 package com.tti;
 
+/**
+ * Contains Methods implemented by Client.java Class
+ */
+
 public interface IClient {
 	public int getId();
 

@@ -1,5 +1,9 @@
 package com.tti;
 
+/**
+ * Contains methods implemented by Vehicle.java Class
+ */
+
 public interface IVehicle {
 
 	public int getID();

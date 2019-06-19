@@ -2,6 +2,18 @@ package com.tti;
 
 import java.util.Scanner;
 
+/**
+ * Presents different job roles to select the specific sub-menu.
+ * 
+ * The options are:
+ * 
+ * 1 Front Desk
+ * 2 Finance Representative
+ * 3 Lease Representative
+ * 4 Full Sale Representative
+ *
+ */
+
 public class MainMenu {
 
 	static Scanner scanner = new Scanner(System.in);

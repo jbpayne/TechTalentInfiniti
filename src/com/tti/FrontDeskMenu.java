@@ -3,6 +3,12 @@ package com.tti;
 import java.time.LocalTime;
 import java.util.Scanner;
 
+/**
+ * Takes user input, stored as Client object, then creates a SaleRequest object, 
+ * in which it stores the Client object along with a selected Vehicle object, 
+ * finally placing the SaleRequest object in the appropriate queue.
+ */
+
 public class FrontDeskMenu {
 	
 	static Scanner scanner = new Scanner(System.in);
@@ -123,6 +129,7 @@ public class FrontDeskMenu {
 			System.out.print("\nEnter number: ");
 	}
 	
+	// Compares the open hours of the queue to current time and prints a message in off-hours.
 	private static void checkHours(int salesPreferenceNumber) {
 		LocalTime now = LocalTime.now();
 		LocalTime open = null;

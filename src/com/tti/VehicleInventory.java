@@ -2,13 +2,22 @@ package com.tti;
 
 import java.util.HashMap;
 
+/**
+ * Creates a hashmap to store the vehicles with int key. Provides a way to list the vehicles
+ * in the hashmap, with filters for lease vehicles and inactive vehicles. Provide a method to
+ * remove a vehicle from inventory.
+ */
+
 public class VehicleInventory {
-	    private static HashMap<Integer, Vehicle> inventory = new HashMap<>();
+	    
+		//Creates a hashmap to store the vehicles with int key.
+		private static HashMap<Integer, Vehicle> inventory = new HashMap<>();
 
 	    public static HashMap<Integer, Vehicle> getVehicleInventory() {
 	         return inventory;
 	    }
 	    
+	    // Populates the hashmap with Vehicle and LightTruck objects.
 	    public static void populateHashMap() {
 	    	
 	    	Vehicle[] VehicleArray = {
@@ -27,6 +36,9 @@ public class VehicleInventory {
 	    		inventory.put(VehicleArray[i].getStockNumber(), VehicleArray[i]);
 	    	}
 	    }
+	    
+	    // Provides a way to list the vehicles the hashmap, with filters for lease vehicles 
+	    // and inactive vehicles.
 	    public static void printInventory(boolean leaseFilter) {
 	    	inventory.forEach((key, value) -> {
 	    		if (!inventory.get(key).isActive()) {
@@ -40,6 +52,7 @@ public class VehicleInventory {
 	    	});
 	    }
 
+	    // Used by printInventory to format and display output.
 		private static void inventoryList(Integer key) {
 			System.out.println(
 				inventory.get(key).getStockNumber() + " " + 
@@ -50,6 +63,7 @@ public class VehicleInventory {
 				);
 		}
 	    
+		// Removes an entry from the hashmap by key.
 	    public static void removeVehicle(int key) {
 	    	inventory.remove(key);
 	    }

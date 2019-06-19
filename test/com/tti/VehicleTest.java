@@ -7,6 +7,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * jUnit tests for Vehicle.java
+ */
+
 public class VehicleTest {
 	private Vehicle vehicle01;
 	private Vehicle vehicle02;

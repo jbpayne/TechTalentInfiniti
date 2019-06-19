@@ -1,5 +1,13 @@
 package com.tti;
 
+/**
+ * SalesRequest Class implements the ISaleRequest.java Class, which abstracts the 
+ * corresponding variables and methods. The SalesRequest.java class constructs the 
+ * SalesRequest object, with parameters (Vehicle Object, Type of Sale String and 
+ * Client Object). The SalesRequest Object will then be used to match a customer 
+ * to a vehicle.
+ */
+
 public class SaleRequest implements ISaleRequest {
 	
 	private static int idCounter = 0;

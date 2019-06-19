@@ -1,5 +1,13 @@
 package com.tti;
 
+/**
+ * Client.java class implements the IClient.java interface. The Client Class then 
+ * constructs the Client Object, which is used to store Client information. Client 
+ * information (Full Name, Address, Phone, Number and id number) is then stored in 
+ * the Client object. Getter and Setter functions are created within the class in 
+ * order to make the data available within the package.
+ */
+
 public class Client implements IClient {
 	
 	private static int idCounter = 0;

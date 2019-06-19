@@ -4,6 +4,18 @@ import java.text.NumberFormat;
 import java.util.Queue;
 import java.util.Scanner;
 
+
+/**
+ * Presents 3 options in order:
+ * 
+ * 1. View next SaleRequest object in the queue.
+ * 2. Delete the ticket.
+ * 3. Delete the vehicle from inventory.
+ * 
+ * If answer is N/n to any question, it exits to MainMenu.
+ *
+ */
+
 public class SalesMenu {
 
 	static Scanner scanner = new Scanner(System.in);

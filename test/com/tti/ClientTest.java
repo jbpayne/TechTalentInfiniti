@@ -5,6 +5,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * jUnit tests for Client.java
+ */
+
 public class ClientTest {
 	
 	private Client client1;

@@ -1,5 +1,9 @@
 package com.tti;
 
+/**
+ * Contains Methods implemented by SaleRequest.java Class
+ */
+
 public interface ISaleRequest {
 	
 	public int getTicketID();

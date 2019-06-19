@@ -1,17 +1,21 @@
 package com.tti;
 
+/**
+ * Vehicles are broken into two types: vehicle and light truck. The LightTruck class extends 
+ * the Vehicle class and implements IVehicle and ILightTruck interfaces. Getter and Setter 
+ * functions are created within the class in order to make the data available within the package.
+ */
+
 // Takes functionality of Vehicle class and adds
-// Towing capacity and Gross Combined Weight Truck Weight and is 4WD as parameters;
+// Towing capacity and Gross Combined Weight Truck Weight and is4WD as parameters;
 class LightTruck extends Vehicle implements IVehicle, ILightTruck {
         private int towingCapacity; //Declares towingCapacity  in lbs. as integer
         private int grossCombinedWeight;//Declares grossCombinedWeight in lbs. as an integer
         private int truckWeight;//Declares Truck weight in lbs. as integer
         private boolean is4wd;//Declare is4wd as Boolean;
 
-        /* Light truck Constructor Code block
+        // Light truck Constructor Code block
            
-
-         */
         public LightTruck(
          int wholesaleCost,
         int retailPrice,
@@ -34,6 +38,7 @@ class LightTruck extends Vehicle implements IVehicle, ILightTruck {
         this.truckWeight = truckWeight;
         this.is4wd = is4wd;
     }
+    
         /**
          * @return the towingCapacity
          */

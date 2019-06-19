@@ -1,5 +1,11 @@
 package com.tti;
 
+/**
+ * The Vehicle class implements the IVehicle.java interface. The Vehicle Class constructs 
+ * the Vehicle object, in which the vehicle information is stored. Getter and Setter functions 
+ * are created within the class in order to make the data available within the package.
+ */
+
 public class Vehicle implements IVehicle {
 
 	private static int idCounter = 0;

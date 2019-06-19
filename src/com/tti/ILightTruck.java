@@ -1,5 +1,9 @@
 package com.tti;
 
+/**
+ * Contains methods implemented by LightTruck.java Class
+ */
+
 public interface ILightTruck {
 
     public int getTowingCapacity();
