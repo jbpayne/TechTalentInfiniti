@@ -1,4 +1,4 @@
-## Tech Talent Infiniti - current release: [v0.17.0](https://github.com/jbpayne/TechTalentInfiniti/releases)
+## Tech Talent Infiniti - current release: [v0.17.1](https://github.com/jbpayne/TechTalentInfiniti/releases)
 
 <h4>Tech Talent Infiniti Car Dealership Sale Request Creation And Management Tool</h4>
 
