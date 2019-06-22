@@ -36,6 +36,9 @@ Contains methods implemented by Vehicle.java Class
 <h5>Vehicle.java Class</h5>
 The Vehicle class implements the IVehicle.java interface. The Vehicle Class constructs the Vehicle object, in which the vehicle information is stored. Getter and Setter functions are created within the class in order to make the data available within the package.
 
+<h5>VehicleInventory.java Class</h5>
+Creates a hashmap to store the vehicles with int key. Provides a way to list the vehicles in the hashmap, with filters for lease vehicles and inactive vehicles. Provide a method to remove a vehicle from inventory.
+
 <h5>ILightTruck Interface</h5>
 Contains methods implemented by LightTruck.java Class
 
